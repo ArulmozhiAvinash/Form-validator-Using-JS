@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300&display=swap');
+
+:root{
+    --color-success: #2ecc71;
+    --color-error: #e74c3c;
+    --color-dark-grey:#777777;
+    --color-light-grey:#f0f0f0;
+    --color-smoke-white:#ffffff;
+    --color-grey-white:#f9fafb;
+    --color-blue-primary:#3498db;
+    --color-blue-secondary:#2d83bd;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background-color: var(--color-grey-white);
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+.container{
+    background-color: var(--color-smoke-white);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.2rem 0.5rem rgba(0,0,0,0.3);
+    width: 40rem;
+}
+h2{
+    text-align: center;
+    margin: 0 0 2rem;
+}
+.form{
+    padding: 3rem 4rem;
+}
+
+.form-control{
+    margin-bottom: 1rem;
+    padding-bottom: 2rem;
+    position: relative;
+}
+
+.form-control label{
+    color:var(--color-dark-grey);
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.form-control input {
+    border: 0.1rem solid var(--color-light-grey);
+    border-radius: 0.5rem;
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.4rem;
+}
+.form-control input:focus {
+    outline: none;
+    border-color:var(--color-dark-grey);
+}
+
+.form-control.success input {
+    border-color:var(--color-success);
+}
+
+.form-control.error input {
+    border-color:var(--color-error);
+}
+
+.form-control small{
+    color: var(--color-error);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+button{
+    cursor: pointer;
+    background-color: var(--color-blue-primary);
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
+    border: none;
+    color: var(--color-smoke-white);
+    display: block;
+    width: 100%;
+}
+button:focus,
+button:active,
+button:hover{
+    outline: none;
+    background-color: var(--color-blue-secondary);
+}
